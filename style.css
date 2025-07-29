@@ -1,0 +1,311 @@
+:root {
+  --azul-esen: #005bac;
+  --dorado-esen: #d6bb72;
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+
+/* Para que el footer quede abajo */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: var(--blanco);
+  color: var(--negro);
+  display: flex;               /* NUEVO */
+  flex-direction: column;      /* NUEVO */
+  min-height: 100vh;           /* NUEVO */
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+  background-color: var(--azul-esen);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* -------------------- NAV -------------------- */
+nav {
+  background-color: var(--dorado-esen);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- MAIN -------------------- */
+main {
+  padding: 2rem;
+  padding-bottom: 5rem; 
+  flex: 1; /* NUEVO */
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* -------------------- FORMULARIOS -------------------- */
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+input,
+select,
+button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--azul-esen);
+  color: var(--blanco);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #004080;
+}
+
+.form-reserva {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-reserva label {
+  font-weight: bold;
+  color: #333;
+}
+
+.page-reserva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+  padding: 2rem;
+}
+
+/* -------------------- CATÁLOGO DE PRODUCTOS -------------------- */
+.catalogo-producto {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.catalogo-producto .producto {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.catalogo-producto .img-placeholder {
+  height: 120px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.catalogo-producto .img-placeholder img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* -------------------- MENÚ DEL DÍA -------------------- */
+.schedule-menu {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.schedule-menu th,
+.schedule-menu td {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.schedule-menu th {
+  background-color: var(--azul-esen);
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+.schedule-menu tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.schedule-menu tbody tr:hover {
+  background-color: #e0e7ff;
+}
+
+.schedule-menu td {
+  vertical-align: middle;
+}
+
+/* -------------------- INICIO -------------------- */
+.main-index {
+  padding:2 rem;
+  margin: 2rem auto;
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  text-align: center;  /* centra texto */
+  gap: 1rem;           /* espacio entre elementos */
+}
+
+.main-index h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--azul-esen);
+}
+
+.main-index p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.botones-index {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.boton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--azul-esen);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #004080;
+}
+
+.highlight-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;      /* evita que las tarjetas salten a otra línea */
+  overflow-x: auto;       /* activa scroll horizontal si es necesario */
+  padding-bottom: 1rem;   /* para que el scroll no tape contenido */
+  align-items: stretch;
+  justify-content: flex-start; /* las tarjetas alineadas al inicio */
+}
+
+
+.highlight-card {
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 300px; /* ← Aumentado desde 220px */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.highlight-card img {
+  width: 100%;
+  height: 140px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  flex-shrink: 0;         /* Evita que la imagen se reduzca */
+}
+
+.highlight-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--azul-esen);
+  flex-grow: 0;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: #333;
+  flex-grow: 1;           /* Para que el párrafo tome el espacio restante */
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  background-color: var(--azul-esen);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}

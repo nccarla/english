@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserve Meal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ESEN Logo" />
+    </div>
+    <h1>ESEN Cafeteria</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="reserva.html">Reserve Meal</a></li>
+      <li><a href="productos.html">Product Menu</a></li>
+      <li><a href="menu-dia.html">Daily Menu</a></li>
+    </ul>
+  </nav>
+  <main class="page-reserva">
+    <form class="form-reserva">
+      <h2>Reserve Meal</h2>
+
+      <label for="nombre">Full Name:</label>
+      <input type="text" id="nombre" required />
+      
+      <label for="tipo">Meal Type:</label>
+      <select id="tipo">
+        <option value="desayuno">Breakfast</option>
+        <option value="almuerzo">Lunch</option>
+      </select>
+      
+      <label for="fecha">Date:</label>
+      <input type="date" id="fecha" required />
+      
+      <label for="hora">Time:</label>
+      <input type="time" id="hora" required />
+      
+      <button type="submit">Reserve</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 ESEN Cafeteria - All rights reserved</p>
+  </footer>
+</body>
+</html>
